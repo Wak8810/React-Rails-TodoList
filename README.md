@@ -1,11 +1,11 @@
-# TodoListReRoR
+# React-Rails-TodoList
 
 React + Ruby on Railsで作成されたTodoリストアプリケーション
 
 ## プロジェクト構成
 
 ```
-TodoListReRoR/
+root/
 ├── backend/           # Ruby on Railsバックエンド
 ├── frontend/          # Reactフロントエンド
 ```
