@@ -6,25 +6,41 @@ React + Ruby on Railsで作成されたTodoリストアプリケーション
 
 ```
 TodoListReRoR/
+├── backend/           # Ruby on Railsバックエンド
 ├── frontend/          # Reactフロントエンド
-│   ├── src/          # ソースコード
-│   ├── public/       # 静的ファイル
-│   └── dist/         # ビルド成果物
-└── .github/          # GitHub設定
-    └── workflows/    # GitHub Actions設定
 ```
 
-## セットアップ
+## ローカル環境でのセットアップ
 
-### フロントエンド
+### 1. バックエンド (Ruby on Rails)
 
 ```bash
+# バックエンドのディレクトリに移動
+cd backend
+
+# 依存関係をインストール
+bundle install
+
+# データベースをセットアップ
+rails db:migrate
+
+# Railsサーバーを起動 (http://localhost:3000)
+rails s
+```
+
+### 2. フロントエンド (React)
+
+新しいターミナルを開いて、以下のコマンドを実行します。
+
+```bash
+# フロントエンドのディレクトリに移動
 cd frontend
+
+# 依存関係をインストール
 npm install
+
+# 開発サーバーを起動 (http://localhost:5173)
 npm run dev
 ```
 
-## デプロイ
-
-このプロジェクトはGitHub Pagesを使用してデプロイされています。
-`master`ブランチへのプッシュ時に自動的にデプロイされます。 
+両方のサーバーが起動したら、ブラウザで `http://localhost:5173` にアクセスすると確認できます。
